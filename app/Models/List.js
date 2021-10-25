@@ -18,7 +18,7 @@ export class List {
               <div class="col-12 text-center rounded"  style="background-color: ${this.color}"alt="lists">
               <button class="btn btn-info" onclick="app.listsController.removeList('${this.id}')">X</button>
                 <div>${this.listName}
-                  <div>complete/${this.total}</div>
+                  <div>${this.getCount()}</div>
                 </div>
               </div>
               <div class="bg-primary" >
@@ -68,7 +68,12 @@ export class List {
     //we have this.id
     //look at jonesys vending machine example,?? 
     //this is for completed vs uncompleted
-    return `${this.total > 0 ? " " : 'btn-dark'}`
+    //NOTE give us all the tasks that belong to this list
+    const allChecks = ProxyState.tasks.filter(c => this.id == c.taskId)
+
+    const completedTasks = allChecks.filter(c => c.check == true)
+
+    return `${completedTasks.length} / ${allChecks.length}`
   }
 
 }

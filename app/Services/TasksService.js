@@ -18,6 +18,14 @@ class TasksService {
         //ProxyState.tasks = ProxyState.tasks.remove(id)
         return ProxyState.tasks
     }
+    checkBox(id) {
+        const found = ProxyState.tasks.find(c => c.id == id)
+        //= ! sets it equal to what it is not. "reverses" the true/false statements
+        found.check = !found.check
+        //have to make it equal itselft
+        ProxyState.tasks = ProxyState.tasks
+
+    }
 
 }
 
