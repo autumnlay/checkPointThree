@@ -14,7 +14,7 @@ class TasksService {
         console.log('we tried')
         //ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
 
-        ProxyState.tasks = ProxyState.tasks.filter(t => t.taskId != id)
+        ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
         //ProxyState.tasks = ProxyState.tasks.remove(id)
         return ProxyState.tasks
     }

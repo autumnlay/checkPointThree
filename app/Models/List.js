@@ -64,5 +64,11 @@ export class List {
     return template
   }
 
+  getCount() {
+    //we have this.id
+    //look at jonesys vending machine example,?? 
+    //this is for completed vs uncompleted
+  }
+
 }
 

@@ -35,7 +35,9 @@ export class ListsController {
     }
 
     removeList(id) {
-        listsService.removeList(id)
+        window.confirm(),
+            listsService.removeList(id)
+
     }
-    
+
 }
