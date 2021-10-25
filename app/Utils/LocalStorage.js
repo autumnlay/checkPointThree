@@ -18,7 +18,6 @@ export function loadState() {
     console.log('loaded data', data)
     //will error otherwise
     if (data != null) {
-        // the data gets saved as POJOs so has to be turned back into pizza classes
         ProxyState.lists = data.lists.map(l => new List(l))
         ProxyState.tasks = data.tasks.map(t => new Task(t))
     }

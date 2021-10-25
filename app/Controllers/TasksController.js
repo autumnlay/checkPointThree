@@ -27,6 +27,7 @@ export class TasksController {
     }
 
     removeTask(id) {
+        window.confirm('Are you sure you wish to delete this task?')
         tasksService.removeTask(id)
     }
 }

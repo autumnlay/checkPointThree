@@ -59,7 +59,7 @@ export class List {
       // document.getElementById('tasks').innerHTML = template
       this.task += t.task
     })
-    //   //this.totalTask += t.totalTask
+    //   //this.total += t.total
     // })
     return template
   }
@@ -68,6 +68,7 @@ export class List {
     //we have this.id
     //look at jonesys vending machine example,?? 
     //this is for completed vs uncompleted
+    return `${this.total > 0 ? " " : 'btn-dark'}`
   }
 
 }

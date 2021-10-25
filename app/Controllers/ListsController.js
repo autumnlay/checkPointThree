@@ -35,8 +35,8 @@ export class ListsController {
     }
 
     removeList(id) {
-        window.confirm(),
-            listsService.removeList(id)
+        window.confirm('Do you wish to delete this List?')
+        listsService.removeList(id)
 
     }
 
