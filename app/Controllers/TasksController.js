@@ -20,9 +20,13 @@ export class TasksController {
         const form = window.event.target
         const taskData = {
             taskName: form.taskName.value,
-            listId: lId
+            taskId: lId
         }
         tasksService.createTask(taskData)
         //form.reset()
+    }
+
+    removeTask(id) {
+        tasksService.removeTask(id)
     }
 }

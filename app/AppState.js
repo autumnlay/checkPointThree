@@ -10,11 +10,11 @@ class AppState extends EventEmitter {
   /**@type {import('./Models/List').List[]} */
   lists = [
     new List({ listName: 'Chores' }),
-    new List({ listName: 'Groceries' })
+    //new List({ listName: 'Groceries' })
   ]
   /**@type {import('./Models/Task'.Task[])} */
   tasks = [
-    new Task({ taskName: 'sweep' })
+    //new Task({ taskName: 'sweep' })
     // new Task({ taskName: 'bread' })
   ]
 
