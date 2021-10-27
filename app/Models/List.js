@@ -13,8 +13,8 @@ export class List {
   }
   get Template() {
     return `
-    <div class="col-md-4 mt-3 p-3">
-              <div class="row border shadow border-dark rounded ">
+    <div class="col-md-4 mt-3 p-3 border shadow border-dark rounded">
+              <div class="row">
               <div class="col-12 text-center rounded"  style="background-color: ${this.color}"alt="lists">
               <button class="btn btn-info" onclick="app.listsController.removeList('${this.id}')">X</button>
                 <div>${this.listName}
@@ -25,7 +25,7 @@ export class List {
               <div>
               <ul>
               <div> Tasks:</div>
-               <div class="col-12">${this.getTask()}</div>
+               <div class="col-12 bg-warning">${this.getTask()}</div>
               
                </div>
                   
